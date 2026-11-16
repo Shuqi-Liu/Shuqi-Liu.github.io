@@ -43,6 +43,7 @@ h3{font-size:1.25rem;font-weight:500}
 p{margin:0 0 1rem}
 .wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
 .measure{max-width:42rem}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .skip{position:absolute;left:-999px;top:0;background:var(--surface);padding:.5rem 1rem}
 .skip:focus{left:1rem;z-index:10}
 
@@ -56,10 +57,7 @@ p{margin:0 0 1rem}
 
 /* hero / poster */
 .hero{padding:2.5rem 0 1rem}
-.venue{color:var(--muted);font-size:.95rem;margin-bottom:.75rem}
-.hero h1{font-size:clamp(1.75rem,1.1rem + 2.8vw,3rem);letter-spacing:-.01em;max-width:30ch;margin-bottom:1rem}
-.authors{color:var(--muted);margin-bottom:1.5rem}
-.authors strong{color:var(--ink);font-weight:600}
+.venue{color:var(--ink);font-size:1.15rem;font-weight:500;margin-bottom:1rem}
 .actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:2rem}
 .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.2rem;border-radius:6px;font-weight:600;font-size:1rem;text-decoration:none;border:1.5px solid var(--blue);line-height:1.2}
 .btn.primary{background:var(--blue);color:var(--blue-ink)}
@@ -68,25 +66,10 @@ p{margin:0 0 1rem}
 .btn.quiet:hover{background:var(--surface)}
 .btn svg{width:1.05em;height:1.05em;flex:none}
 
-/* stride motif: fast leg (top) and slow leg (bottom) stance phases converging, like split-belt adaptation */
-.stride{width:100%;height:auto;display:block;margin:0 0 1.75rem}
-.stride .fb{fill:var(--blue)}
-.stride .sb{fill:var(--orange)}
-.stride g{clip-path:inset(0 0 0 0)}
-@media (prefers-reduced-motion:no-preference){
-  .stride g{animation:walk 2.4s cubic-bezier(.3,.6,.3,1) .2s both}
-  @keyframes walk{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
-}
-
 .poster{margin:0}
 .poster a{display:block;border:1px solid var(--rule);border-radius:6px;overflow:hidden;background:#fff}
 .poster figcaption{color:var(--muted);font-size:.9rem;margin-top:.6rem}
 
-.findings{display:grid;gap:2rem;grid-template-columns:1fr;padding:2.25rem 0 1rem}
-@media (min-width:52rem){.findings{grid-template-columns:1fr 1.6fr}}
-.findings ul{margin:0;padding-left:1.1rem}
-.findings li{margin-bottom:.75rem}
-.findings li::marker{color:var(--orange)}
 .note{color:var(--muted);font-size:.9rem}
 
 section{padding:3rem 0}
@@ -142,7 +125,7 @@ details > div{padding:0 0 1rem}
 .award .yr{color:var(--muted);white-space:nowrap;font-size:.92rem}
 
 footer{border-top:1px solid var(--rule);padding:2rem 0 3rem;color:var(--muted);font-size:.9rem}
-@media print{.top nav,.actions,.stride,footer{display:none}details{border:0}details > div{display:block}}
+@media print{.top nav,.actions,footer{display:none}details{border:0}details > div{display:block}}
 </style>
 </head>
 <body>
@@ -168,8 +151,7 @@ footer{border-top:1px solid var(--rule);padding:2rem 0 3rem;color:var(--muted);f
   <p class="venue">Poster at Society for Neuroscience 2026, Washington, DC</p>
   <!-- Optional: add your session / board number, e.g.
   <p class="venue">Session 123.45, Board A1, Monday Nov 16, 1–5 pm</p> -->
-  <h1>Aging limits the reduction of reactive muscle activity to perturbations but spares the retrieval of context-specific patterns with practice</h1>
-  <p class="authors"><strong>Shuqi Liu</strong>, Andrea M. Weinstein, Gelsy Torres-Oviedo<br>University of Pittsburgh</p>
+  <h1 class="sr-only">Aging limits the reduction of reactive muscle activity to perturbations but spares the retrieval of context-specific patterns with practice. Shuqi Liu, Andrea M. Weinstein, Gelsy Torres-Oviedo.</h1>
 
   <div class="actions">
     <a class="btn primary" href="https://www.biorxiv.org/content/10.64898/2026.11.11.766012v1" target="_blank" rel="noopener">
@@ -179,35 +161,6 @@ footer{border-top:1px solid var(--rule);padding:2rem 0 3rem;color:var(--muted);f
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>
       Download poster (PDF)</a>
   </div>
-
-  <svg class="stride" viewBox="0 0 1000 42" aria-hidden="true" focusable="false"><g>
-<rect class="fb" x="3.0" y="3" width="24.8" height="14" rx="7"/>
-<rect class="sb" x="41.5" y="25" width="58.6" height="14" rx="7"/>
-<rect class="fb" x="79.9" y="3" width="29.6" height="14" rx="7"/>
-<rect class="sb" x="118.4" y="25" width="53.8" height="14" rx="7"/>
-<rect class="fb" x="156.8" y="3" width="33.0" height="14" rx="7"/>
-<rect class="sb" x="195.3" y="25" width="50.4" height="14" rx="7"/>
-<rect class="fb" x="233.8" y="3" width="35.5" height="14" rx="7"/>
-<rect class="sb" x="272.2" y="25" width="47.9" height="14" rx="7"/>
-<rect class="fb" x="310.7" y="3" width="37.2" height="14" rx="7"/>
-<rect class="sb" x="349.2" y="25" width="46.2" height="14" rx="7"/>
-<rect class="fb" x="387.6" y="3" width="38.5" height="14" rx="7"/>
-<rect class="sb" x="426.1" y="25" width="44.9" height="14" rx="7"/>
-<rect class="fb" x="464.5" y="3" width="39.4" height="14" rx="7"/>
-<rect class="sb" x="503.0" y="25" width="44.0" height="14" rx="7"/>
-<rect class="fb" x="541.5" y="3" width="40.1" height="14" rx="7"/>
-<rect class="sb" x="579.9" y="25" width="43.3" height="14" rx="7"/>
-<rect class="fb" x="618.4" y="3" width="40.5" height="14" rx="7"/>
-<rect class="sb" x="656.8" y="25" width="42.9" height="14" rx="7"/>
-<rect class="fb" x="695.3" y="3" width="40.8" height="14" rx="7"/>
-<rect class="sb" x="733.8" y="25" width="42.5" height="14" rx="7"/>
-<rect class="fb" x="772.2" y="3" width="41.1" height="14" rx="7"/>
-<rect class="sb" x="810.7" y="25" width="42.3" height="14" rx="7"/>
-<rect class="fb" x="849.2" y="3" width="41.3" height="14" rx="7"/>
-<rect class="sb" x="887.6" y="25" width="42.1" height="14" rx="7"/>
-<rect class="fb" x="926.1" y="3" width="41.4" height="14" rx="7"/>
-<rect class="sb" x="964.5" y="25" width="35.5" height="14" rx="7"/>
-  </g></svg>
 
   <figure class="poster">
     <a href="assets/Liu-SfN2026-poster.pdf" target="_blank" rel="noopener" aria-label="Open the full-resolution poster PDF">
@@ -221,17 +174,6 @@ footer{border-top:1px solid var(--rule);padding:2rem 0 3rem;color:var(--muted);f
   </figure>
 </div>
 
-<div class="findings">
-  <div>
-    <h2>At a glance</h2>
-    <p class="note">21 older adults (mean age 72) and 20 younger adults (mean age 25) adapted to a 2:1 split-belt treadmill before and after a practice visit. Leg muscle activity (EMG) was modeled as a mix of a reactive pattern and a context-specific (practiced) pattern.</p>
-  </div>
-  <ul>
-    <li>With practice, reactive muscle activity decreased in both groups. In distal leg muscles, the decrease was smaller in older adults.</li>
-    <li>Context-specific muscle activity increased with practice in both groups, with little difference between them.</li>
-    <li>Our interpretation: in this sample, aging affected how practice changed the reactive response, while the formation and retrieval of context-specific patterns appeared intact. Rehabilitation for older adults might build on this preserved ability while targeting reactive responses to environmental transitions.</li>
-  </ul>
-</div>
 </div>
 
 <!-- ============ PREPRINT ============ -->
@@ -257,9 +199,9 @@ footer{border-top:1px solid var(--rule);padding:2rem 0 3rem;color:var(--muted);f
 <div class="wrap about">
   <div class="measure">
     <h2>About me</h2>
+    <p>I'm open to research scientist roles in academia and industry.</p>
     <p>I am a postdoctoral associate at the University of Pittsburgh. I study how aging affects motor learning in walking, combining EMG, motion capture, and brain imaging (fNIRS and MRI) with statistical modeling such as hierarchical regression, canonical correlation analysis, and PCA.</p>
     <p>I earned my PhD in Bioengineering at Pitt in 2026. Before graduate school, I spent two and a half years as a software engineer at Meso Scale Diagnostics, building Java software for scientific data analysis and visualization. My undergraduate degree is in mathematics with a minor in computer science.</p>
-    <p>I am open to research scientist roles in academia and industry.</p>
   </div>
   <div>
     <h3 style="margin-bottom:.75rem">Contact</h3>
