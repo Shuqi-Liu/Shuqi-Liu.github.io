@@ -124,20 +124,37 @@ details > div{padding:0 0 1rem}
 .award:last-child{border-bottom:0}
 .award .yr{color:var(--muted);white-space:nowrap;font-size:.92rem}
 
+/* research output */
+.outputs{list-style:none;margin:0;padding:0}
+.outputs > li{padding:1.1rem 0;border-bottom:1px solid var(--rule)}
+.outputs .cite{max-width:52rem;margin-bottom:.4rem}
+.outputs .cite b{font-weight:600}
+.outputs .note{margin-bottom:.6rem}
+.links{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.6rem}
+.btn.small{padding:.5rem .9rem;font-size:.92rem;border-radius:5px}
+.status{display:inline-block;font-size:.78rem;font-weight:600;color:var(--blue);border:1px solid currentColor;border-radius:3px;padding:0 .35rem;margin-right:.45rem;vertical-align:.12em}
+.status.pub{color:var(--ink)}
+details.viewer,details.viewer:first-of-type{border:0;margin-top:.6rem}
+details.viewer > summary{display:inline-flex;justify-content:flex-start;padding:.5rem .9rem}
+details.viewer > summary::after{content:none}
+details.viewer .open-label{display:none}
+details.viewer[open] .open-label{display:inline}
+details.viewer[open] .closed-label{display:none}
+details.viewer .poster{margin:1rem 0 0}
 footer{border-top:1px solid var(--rule);padding:2rem 0 3rem;color:var(--muted);font-size:.9rem}
 @media print{.top nav,.actions,footer{display:none}details{border:0}details > div{display:block}}
 </style>
 </head>
 <body>
-<a class="skip" href="#poster">Skip to poster</a>
+<a class="skip" href="#about">Skip to content</a>
 
 <header class="top">
   <div class="wrap">
     <a class="name" href="#">Shuqi Liu, PhD</a>
     <nav aria-label="Sections">
-      <a href="#poster">Poster</a>
-      <a href="#preprint">Preprint</a>
       <a href="#about">About</a>
+      <a href="#papers">Papers</a>
+      <a href="#posters">Posters</a>
       <a href="#cv">CV</a>
     </nav>
   </div>
@@ -146,53 +163,8 @@ footer{border-top:1px solid var(--rule);padding:2rem 0 3rem;color:var(--muted);f
 <main>
 <div class="wrap">
 
-<!-- ============ POSTER ============ -->
-<div class="hero" id="poster">
-  <p class="venue">Poster at Society for Neuroscience 2026, Washington, DC</p>
-  <!-- Optional: add your session / board number, e.g.
-  <p class="venue">Session 123.45, Board A1, Monday Nov 16, 1–5 pm</p> -->
-  <h1 class="sr-only">Aging limits the reduction of reactive muscle activity to perturbations but spares the retrieval of context-specific patterns with practice. Shuqi Liu, Andrea M. Weinstein, Gelsy Torres-Oviedo.</h1>
-
-  <div class="actions">
-    <a class="btn primary" href="https://www.biorxiv.org/content/10.64898/2026.11.11.766012v1" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h8"/></svg>
-      Read the preprint on bioRxiv</a>
-    <a class="btn quiet" href="assets/Liu-SfN2026-poster.pdf" download>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>
-      Download poster (PDF)</a>
-  </div>
-
-  <figure class="poster">
-    <a href="assets/Liu-SfN2026-poster.pdf" target="_blank" rel="noopener" aria-label="Open the full-resolution poster PDF">
-      <img src="assets/poster-1200.jpg"
-           srcset="assets/poster-1200.jpg 1200w, assets/poster-2400.jpg 2400w"
-           sizes="(min-width: 68rem) 66rem, 100vw"
-           width="2400" height="1801"
-           alt="SfN 2026 poster by Shuqi Liu, Andrea Weinstein, and Gelsy Torres-Oviedo, showing split-belt treadmill methods, EMG regression results for older and younger adults, and conclusions.">
-    </a>
-    <figcaption>Tap or click the poster to open the full-resolution PDF and zoom in.</figcaption>
-  </figure>
+<h1 class="sr-only">Shuqi Liu, PhD. Research on aging, motor learning, and walking.</h1>
 </div>
-
-</div>
-
-<!-- ============ PREPRINT ============ -->
-<section id="preprint">
-<div class="wrap">
-  <h2>The preprint</h2>
-  <article class="paper">
-    <h3>With practice, aging limits the reduction of reactive muscle activity patterns to perturbations but spares the retrieval of context-specific patterns</h3>
-    <p class="meta"><strong>Liu, S.</strong>, Weinstein, A. M., &amp; Torres-Oviedo, G. (2026). bioRxiv.<br>
-      doi: <a href="https://doi.org/10.64898/2026.11.11.766012">10.64898/2026.11.11.766012</a></p>
-    <a class="btn primary" href="https://www.biorxiv.org/content/10.64898/2026.11.11.766012v1" target="_blank" rel="noopener">Read on bioRxiv</a>
-    <p class="note" style="margin:1rem 0 0">Preprints have not yet been peer reviewed.</p>
-  </article>
-  <div class="related measure">
-    <h3>Related preprint (kinematics and prefrontal cortical neural contribution)</h3>
-    <p><b>Liu, S.</b>, Rosso, A. L., Baillargeon, E. M., Weinstein, A. M., &amp; Torres-Oviedo, G. Locomotor savings relies on attentional control of walking in older, but not younger adults. bioRxiv; submitted to <i>npj Aging</i>. <a href="https://doi.org/10.64898/2026.01.12.698834">doi:10.64898/2026.01.12.698834</a></p>
-  </div>
-</div>
-</section>
 
 <!-- ============ ABOUT ============ -->
 <section id="about">
@@ -210,6 +182,111 @@ footer{border-top:1px solid var(--rule);padding:2rem 0 3rem;color:var(--muted);f
       <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/shuqiliu" target="_blank" rel="noopener">linkedin.com/in/shuqiliu</a></li>
       <li><span>GitHub</span><a href="https://github.com/Shuqi-Liu" target="_blank" rel="noopener">github.com/Shuqi-Liu</a></li>
       <li><span>CV</span><a href="assets/Shuqi-Liu-CV.pdf" download>Download CV (PDF)</a></li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<!-- ============ RESEARCH OUTPUT ============ -->
+<section id="research">
+<div class="wrap">
+  <h2>Research output</h2>
+
+  <div class="cv-block" id="papers">
+    <h3>Papers</h3>
+    <ul class="outputs">
+      <li>
+        <p class="cite"><span class="status">Preprint</span><b>Liu, S.</b>, Weinstein, A. M., &amp; Torres-Oviedo, G. (2026). With practice, aging limits the reduction of reactive muscle activity patterns to perturbations but spares the retrieval of context-specific patterns. <i>bioRxiv</i>. doi:10.64898/2026.11.11.766012</p>
+        <p class="note">Companion paper to the SfN 2026 poster.</p>
+        <div class="links"><a class="btn small primary" href="https://www.biorxiv.org/content/10.64898/2026.11.11.766012v1" target="_blank" rel="noopener">Read on bioRxiv</a></div>
+      </li>
+      <li>
+        <p class="cite"><span class="status">Preprint</span><b>Liu, S.</b>, Rosso, A. L., Baillargeon, E. M., Weinstein, A. M., &amp; Torres-Oviedo, G. (2026). Locomotor savings relies on attentional control of walking in older, but not younger adults. <i>bioRxiv</i>; submitted to <i>npj Aging</i>. doi:10.64898/2026.01.12.698834</p>
+        <p class="note">Kinematics and prefrontal cortical neural contribution.</p>
+        <div class="links"><a class="btn small primary" href="https://doi.org/10.64898/2026.01.12.698834" target="_blank" rel="noopener">Read on bioRxiv</a></div>
+      </li>
+      <li>
+        <p class="cite"><span class="status pub">Published</span><b>Liu, S.</b>, Rosso, A. L., Baillargeon, E. M., Weinstein, A. M., Rosano, C., &amp; Torres-Oviedo, G. (2024). Novel attentional gait index reveals a cognitive ability-related decline in gait automaticity during dual-task walking. <i>Frontiers in Aging Neuroscience, 15</i>. doi:10.3389/fnagi.2023.1283376</p>
+        <div class="links"><a class="btn small primary" href="https://www.frontiersin.org/journals/aging-neuroscience/articles/10.3389/fnagi.2023.1283376/full" target="_blank" rel="noopener">Read in Frontiers</a></div>
+      </li>
+    </ul>
+    <p class="note" style="margin-top:.75rem">Preprints have not yet been peer reviewed.</p>
+  </div>
+
+  <div class="cv-block" id="posters">
+    <h3>Posters</h3>
+    <ul class="outputs">
+      <li>
+        <p class="cite"><b>Liu, S.</b>, Weinstein, A. M., &amp; Torres-Oviedo, G. (2026). Aging limits the reduction of reactive muscle activity to perturbations but spares the retrieval of context-specific patterns with practice. Society for Neuroscience, Washington, DC.</p>
+        <!-- Optional: add your session / board number, e.g.
+        <p class="note">Session 123.45, Board A1, Monday Nov 16, 1–5 pm</p> -->
+        <details class="viewer">
+          <summary class="btn small primary"><span class="closed-label">View poster</span><span class="open-label">Hide poster</span></summary>
+          <figure class="poster">
+            <a href="assets/Liu-SfN2026-poster.pdf" target="_blank" rel="noopener" aria-label="Open the full-resolution poster PDF">
+              <img src="assets/poster-1200.jpg"
+                   srcset="assets/poster-1200.jpg 1200w, assets/poster-2400.jpg 2400w"
+                   sizes="(min-width: 68rem) 66rem, 100vw"
+                   width="2400" height="1801" loading="lazy"
+                   alt="SfN 2026 poster by Shuqi Liu, Andrea Weinstein, and Gelsy Torres-Oviedo, showing split-belt treadmill methods, EMG regression results for older and younger adults, and conclusions.">
+            </a>
+            <figcaption>Tap or click the poster to open the full-resolution PDF and zoom in.</figcaption>
+          </figure>
+        </details>
+        <div class="links"><a class="btn small quiet" href="assets/Liu-SfN2026-poster.pdf" download>Download poster (PDF)</a></div>
+      </li>
+      <li>
+        <p class="cite"><b>Liu, S.</b>*, Brantly, N. W.*, Huppert, T., Weber, D. J., Geyer, H., &amp; Torres-Oviedo, G. (2024). Practice improves performance and reduces attentional demand of locomotor adaptation. Society for Neuroscience, Chicago, IL.</p>
+        <p class="note">*Equal contribution.</p>
+        <details class="viewer">
+          <summary class="btn small primary"><span class="closed-label">View poster</span><span class="open-label">Hide poster</span></summary>
+          <figure class="poster">
+            <a href="assets/Liu-SfN2024-poster.pdf" target="_blank" rel="noopener" aria-label="Open the full-resolution poster PDF">
+              <img src="assets/poster-SfN2024-1200.jpg"
+                   srcset="assets/poster-SfN2024-1200.jpg 1200w, assets/poster-SfN2024-2400.jpg 2400w"
+                   sizes="(min-width: 68rem) 66rem, 100vw"
+                   width="2400" height="1801" loading="lazy"
+                   alt="SfN 2024 poster on how practice changes step length asymmetry and prefrontal cortical activation measured with fNIRS during split-belt treadmill walking.">
+            </a>
+            <figcaption>Tap or click the poster to open the full-resolution PDF and zoom in.</figcaption>
+          </figure>
+        </details>
+        <div class="links"><a class="btn small quiet" href="assets/Liu-SfN2024-poster.pdf" download>Download poster (PDF)</a></div>
+      </li>
+      <li>
+        <p class="cite"><b>Liu, S.</b>, Rosso, A. L., Baillargeon, E. M., Weinstein, A. M., &amp; Torres-Oviedo, G. (2023). Attentional control of gait contributes to locomotor flexibility in older adults. Society for Neuroscience, Washington, DC.</p>
+        <details class="viewer">
+          <summary class="btn small primary"><span class="closed-label">View poster</span><span class="open-label">Hide poster</span></summary>
+          <figure class="poster">
+            <a href="assets/Liu-SfN2023-poster.pdf" target="_blank" rel="noopener" aria-label="Open the full-resolution poster PDF">
+              <img src="assets/poster-SfN2023-1200.jpg"
+                   srcset="assets/poster-SfN2023-1200.jpg 1200w, assets/poster-SfN2023-2400.jpg 2400w"
+                   sizes="(min-width: 68rem) 66rem, 100vw"
+                   width="2400" height="1801" loading="lazy"
+                   alt="SfN 2023 poster relating an attentional gait index from dual-task walking to training-induced improvements in saving and switching during split-belt walking in older adults.">
+            </a>
+            <figcaption>Tap or click the poster to open the full-resolution PDF and zoom in.</figcaption>
+          </figure>
+        </details>
+        <div class="links"><a class="btn small quiet" href="assets/Liu-SfN2023-poster.pdf" download>Download poster (PDF)</a></div>
+      </li>
+      <li>
+        <p class="cite"><b>Liu, S.</b>, Rosso, A. L., Baillargeon, E. M., Weinstein, A. M., &amp; Torres-Oviedo, G. (2022). Novel automaticity index combining cortical activation and performance in dual tasks reveals an age-related decline in gait automaticity. Society for Neuroscience, San Diego, CA.</p>
+        <details class="viewer">
+          <summary class="btn small primary"><span class="closed-label">View poster</span><span class="open-label">Hide poster</span></summary>
+          <figure class="poster">
+            <a href="assets/Liu-SfN2022-poster.pdf" target="_blank" rel="noopener" aria-label="Open the full-resolution poster PDF">
+              <img src="assets/poster-SfN2022-1200.jpg"
+                   srcset="assets/poster-SfN2022-1200.jpg 1200w, assets/poster-SfN2022-2400.jpg 2400w"
+                   sizes="(min-width: 68rem) 66rem, 100vw"
+                   width="2400" height="1801" loading="lazy"
+                   alt="SfN 2022 poster introducing an automaticity index that combines fNIRS prefrontal activation and dual-task performance, showing declines with age and cognitive ability.">
+            </a>
+            <figcaption>Tap or click the poster to open the full-resolution PDF and zoom in.</figcaption>
+          </figure>
+        </details>
+        <div class="links"><a class="btn small quiet" href="assets/Liu-SfN2022-poster.pdf" download>Download poster (PDF)</a></div>
+      </li>
     </ul>
   </div>
 </div>
