@@ -1,6 +1,6 @@
 # shuqi-liu.github.io
 
-Personal site for Shuqi Liu: SfN 2026 poster, bioRxiv preprint, and CV.
+Personal site for Shuqi Liu with access to papers and poster pdfs. 
 
 ## Files
 - `index.html`: the whole site (HTML + CSS in one file). Edit text directly here.
